@@ -1,1 +1,4 @@
-﻿.obsidian
+.obsidian/
+site/
+*.code-workspace
+*.xml
