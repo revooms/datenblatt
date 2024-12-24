@@ -1,0 +1,27 @@
+site_name: datenblatt
+site_url: http://localhost:8000
+docs_dir: data
+theme:
+  name: material
+  features:
+    # - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tabs
+plugins:
+  - blog
+  - search
+  # - social
+  - tags:
+      tags_file: tags.md 
+markdown_extensions:
+  - attr_list
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
