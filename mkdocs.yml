@@ -9,8 +9,14 @@ theme:
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sections
+    # - navigation.expand
+    - navigation.top
 plugins:
-  - blog
+  - blog:
+      post_readtime: true
+      # archive_toc: true
   - search
   # - social
   - tags:
