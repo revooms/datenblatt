@@ -1,0 +1,27 @@
+Spickern/Dart-App zum schnellen/einfachen Verwalten von Spicker-Runden
+
+- Spieler auswählen
+	- Können neu eingegeben werden, werden für weitere Spiele gespeichert
+- Spielart auswählen
+	- 302/502 (Punkte)
+	- 2 von 3, 3 von 5, 5 von 7 (Spiele gewonnen)
+	- Sieger erhält ein "Krönchen" 👑
+- Spiel starten
+	- Datum/Startzeit speichern
+- App zeigt an, wer an der Reihe ist
+	- Bisherige Punktzahl wird angezeigt
+	- Runde wird angezeigt
+	- Eingabefeld für erreichte Punkte
+		- Punkte werden eingegeben -> Submitted (Daten werden gespeichert) -> Nexter Spieler
+	- Spiel wird "en route" gespeichert, d.h. ein Spiel kann jederzeit abgebrochen/weitergespielt werden
+- "History" 
+	- Spiele/Punkte werden gespeichert
+	- Spiele/Punkte können je Spieler abgerufen werden
+- Statistiken
+	- Erstes Spiel gestartet am
+	- Spieler-Statistiken:
+		- Anzahl Spiele
+		- Anzahl Würfe
+		- Anzahl NULL-Würfe
+		- Avg. Punkte pro Spiel
+			- pro Wurf
