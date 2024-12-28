@@ -1,0 +1,3 @@
+- https://stream.twitch.tv/ingests/
+- https://docs.derivative.ca/Video_Streaming_User_Guide
+- https://docs.derivative.ca/RTMP
