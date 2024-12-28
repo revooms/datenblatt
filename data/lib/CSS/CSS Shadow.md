@@ -6,11 +6,12 @@ tags:
   - css
   - shadow
   - hsl
-title: foobar
+title: CSS Shadow
 release_date: 2022-01-12
-categories: ["Test", "Tettttss2"]
+categories:
+  - Test
+  - Tettttss2
 ---
-
 Via https://www.joshwcomeau.com/css/introducing-shadow-palette-generator/
 
 ```

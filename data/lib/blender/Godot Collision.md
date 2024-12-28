@@ -1,4 +1,5 @@
 in blender:
+
 - Duplicate the mesh
 - Rename it to "XYZ-colonly"
 	- XYZ being the name of the original mesh

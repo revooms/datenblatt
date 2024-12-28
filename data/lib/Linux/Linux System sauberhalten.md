@@ -1,4 +1,12 @@
-- Journal-Dateien aufräumen
+---
+tags:
+  - linux
+  - maintenance
+  - housekeeping
+  - clean
+ 
+---
+### Journal-Dateien aufräumen
 ```
 sudo journalctl --vacuum-time=3weeks
 ```
@@ -7,7 +15,7 @@ sudo journalctl --vacuum-time=3weeks
 sudo journalctl --vacuum-size=50M
 ```
 
-- Plattenplatz
+### Plattenplatz
 ```
 sudo du -h --max-depth=1 /opt | sort -h
 ```
