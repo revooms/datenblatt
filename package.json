@@ -1,0 +1,22 @@
+{
+  "name": "datenblatt",
+  "version": "1.0.0",
+  "description": "datenblatt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "mkdocs serve",
+    "build": "mkdocs build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revooms/datenblatt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revooms/datenblatt/issues"
+  },
+  "homepage": "https://github.com/revooms/datenblatt#readme"
+}
