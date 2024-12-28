@@ -1,6 +1,7 @@
+---
+title: Tags
+---
 
-# Tags
-
-Following is a list of relevant tags:
+Eine Liste der verwendeten Tags auf dieser Site
 
 <!-- material/tags -->
