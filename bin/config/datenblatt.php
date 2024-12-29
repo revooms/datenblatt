@@ -3,6 +3,7 @@
 $basePath = app_path() . '/../../' . env('OUTPUTFOLDER', 'data');
 
 return [
+    'base_path' => $basePath,
     'blog_path' => $basePath . '/blog/posts',
     'media_path' => $basePath . '/blog/media',
     'lib_path' => $basePath . '/lib',
