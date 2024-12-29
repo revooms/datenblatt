@@ -1,0 +1,12 @@
+- https://codepen.io/
+- https://jsonlint.com/
+- https://nimbletext.com/HowTo/ManipulateText
+- https://pastebin.com/
+- https://regex101.com/
+- https://stackoverflow.com/
+- http://sqlfiddle.com/
+- https://getbootstrap.com/docs/4.5/getting-started/introduction/
+- https://en.wikipedia.org/wiki/List_of_Unicode_characters#Miscellaneous_Symbols
+- https://google-webfonts-helper.herokuapp.com/fonts/abel?subsets=latin
+- https://apps.timwhitlock.info/emoji/tables/unicode - Unicode Emojis
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors CSS Attribute Selectors
