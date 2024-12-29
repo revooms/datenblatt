@@ -1,4 +1,0 @@
-AudioPlayer Webkomponente
-
-- Erweiterbar
-- Stylebar

@@ -1,3 +1,0 @@
-```
-dpkg --print-architecture
-```
