@@ -9,4 +9,4 @@ tags:
 - Fokus auf Inhalte
 - "virtuelle, nutzlose" Punkte auf diversen Seiten ausblenden
 - Stylus CSS Styles
-	- -> Firefox Extension
+	- Firefox Extension
