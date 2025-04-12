@@ -10,6 +10,8 @@ permissions:
 jobs:
   laravel-zero-tests:
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}    
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
@@ -18,6 +20,7 @@ jobs:
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    
     - name: Copy .env
       working-directory: ./bin
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
@@ -27,6 +30,7 @@ jobs:
     - name: Execute Laravel Zero Datenblatt executable
       working-directory: ./bin
       run: php datenblatt fetch:iptv
+    
     - name: Commit files
       run: |
         git config --local user.email "datenblatt+github-actions[bot]@users.noreply.github.com"
