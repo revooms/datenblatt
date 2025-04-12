@@ -4,3 +4,4 @@ site/
 *.xml
 data/lib/Reason and Audio
 data/media
+.vscode/extensions.json
