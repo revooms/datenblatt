@@ -4,5 +4,5 @@ site/
 *.xml
 data/lib/Reason and Audio
 data/media
-data/api/*
+data/api
 .vscode/extensions.json
