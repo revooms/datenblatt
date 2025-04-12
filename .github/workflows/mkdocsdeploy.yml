@@ -1,6 +1,8 @@
 name: "Deploy mkdocs to github pages"
 on:
   push:
+    paths:
+      - data/**
     branches:
       - main
 permissions:
