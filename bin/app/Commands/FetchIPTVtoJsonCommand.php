@@ -21,14 +21,15 @@ class FetchIPTVtoJsonCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Fetches the latest iptv.org channels list for DE and parses it a .json file';
+    protected $description = 'Fetches the latest Free-TV/IPTV channels list for DE and parses it a .json file';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $url = 'https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/de.m3u';
+        // $url = 'https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/de.m3u';
+        $url = 'https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_germany.m3u8';
 
         try {
             $httpClient = new Client([
@@ -46,15 +47,15 @@ class FetchIPTVtoJsonCommand extends Command
             $re = '/#EXTINF:(.+?)[,]\s?(.+?)[\r\n]+?((?:https?|rtmp):\/\/(?:\S*?\.\S*?)(?:[\s)\[\]{};"\'<]|\.\s|$))/';
             $attributes = '/([a-zA-Z0-9\-\_]+?)="([^"]*)"/';
 
-            $m3ufile = str_replace('tvg-logo', 'thumb_square', $m3ufile);
-            $m3ufile = str_replace('tvg-id', 'id', $m3ufile);
-            $m3ufile = str_replace('tvg-name', 'author', $m3ufile);
-            $m3ufile = str_replace('group-title', 'group', $m3ufile);
-            $m3ufile = str_replace('tvg-country', 'country', $m3ufile);
-            $m3ufile = str_replace('tvg-language', 'language', $m3ufile);
+            // $m3ufile = str_replace('tvg-logo', 'thumb_square', $m3ufile);
+            // $m3ufile = str_replace('tvg-id', 'id', $m3ufile);
+            // $m3ufile = str_replace('tvg-name', 'author', $m3ufile);
+            // $m3ufile = str_replace('group-title', 'group', $m3ufile);
+            // $m3ufile = str_replace('tvg-country', 'country', $m3ufile);
+            // $m3ufile = str_replace('tvg-language', 'language', $m3ufile);
 
             preg_match_all($re, $m3ufile, $matches);
-            
+
             $items = [];
             $itemsGeoblocked = [];
 
@@ -62,10 +63,10 @@ class FetchIPTVtoJsonCommand extends Command
                 preg_match($re, $list, $matchList);
                 $mediaURL = preg_replace("/[\n\r]/", "", $matchList[3]);
                 $mediaURL = preg_replace('/\s+/', '', $mediaURL);
+
                 $newdata =  array(
                     'title' => $matchList[2],
                     'url' => $mediaURL,
-                    'url_media' => $mediaURL,
                 );
 
                 preg_match_all($attributes, $list, $matches, PREG_SET_ORDER);
@@ -87,12 +88,14 @@ class FetchIPTVtoJsonCommand extends Command
                 'created_at' => date('Y-m-d H:i:s'),
                 'original_playlist_url' => $url,
                 'channels' => $items,
-                'channels_geoblocked' => $itemsGeoblocked,
             ];
+            if (!empty($itemsGeoblocked)) {
+                $data['channels_geoblocked'] = $itemsGeoblocked;
+            }
 
             // Write JSON to .json file in data folder
             file_put_contents("../data/api/iptv_channels_ger.json", json_encode($data));
-            
+
             exit();
         } catch (\Throwable $th) {
             throw $th;
