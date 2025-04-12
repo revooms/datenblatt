@@ -94,7 +94,11 @@ class FetchIPTVtoJsonCommand extends Command
             }
 
             // Write JSON to .json file in data folder
-            file_put_contents("../data/api/iptv_channels_ger.json", json_encode($data));
+            $dir = "../data/api";
+            if (!is_dir($dir)) {
+                mkdir($dir);
+            }
+            file_put_contents("{$dir}/iptv_channels_ger.json", json_encode($data));
 
             exit();
         } catch (\Throwable $th) {
