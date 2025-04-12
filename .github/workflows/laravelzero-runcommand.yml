@@ -7,9 +7,6 @@ on:
       - main
 permissions:
   contents: write
-defaults:
-  run:
-    working-directory: 'bin/'
 jobs:
   laravel-zero-tests:
     runs-on: ubuntu-latest
@@ -22,10 +19,13 @@ jobs:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Copy .env
+      working-directory: ./bin
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
+      working-directory: ./bin
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Execute Laravel Zero Datenblatt executable
+      working-directory: ./bin
       run: php datenblatt fetch:iptv
     - name: Commit files
       run: |
