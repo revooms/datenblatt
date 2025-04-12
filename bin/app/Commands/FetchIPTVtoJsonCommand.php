@@ -63,10 +63,8 @@ class FetchIPTVtoJsonCommand extends Command
                 $mediaURL = preg_replace("/[\n\r]/", "", $matchList[3]);
                 $mediaURL = preg_replace('/\s+/', '', $mediaURL);
                 $newdata =  array(
-                    // 'service' => "iptv",
                     'title' => $matchList[2],
                     'url' => $mediaURL,
-                    'url_playlist' => $url,
                     'url_media' => $mediaURL,
                 );
 
@@ -85,7 +83,9 @@ class FetchIPTVtoJsonCommand extends Command
 
             $data = [
                 'title' => "IPTV Streams DE",
+                'description' => "Eine Liste von IPTV-Sendern, extrahiert und konvertiert nach JSON von {$url}",
                 'created_at' => date('Y-m-d H:i:s'),
+                'original_playlist_url' => $url,
                 'channels' => $items,
                 'channels_geoblocked' => $itemsGeoblocked,
             ];
