@@ -42,6 +42,7 @@ class FetchIPTVtoJsonCommand extends Command
             $getResponse = Http::withoutVerifying()->get($url);
             $m3ufile = $getResponse->body();
 
+            // Kudos to https://github.com/onigetoc/m3u8-PHP-Parser/blob/master/m3u-parser.php
             $re = '/#EXTINF:(.+?)[,]\s?(.+?)[\r\n]+?((?:https?|rtmp):\/\/(?:\S*?\.\S*?)(?:[\s)\[\]{};"\'<]|\.\s|$))/';
             $attributes = '/([a-zA-Z0-9\-\_]+?)="([^"]*)"/';
 
@@ -90,7 +91,7 @@ class FetchIPTVtoJsonCommand extends Command
             ];
 
             // Write JSON to .json file in data folder
-            file_put_contents("../data/api/iptv_channels_de.json", json_encode($data));
+            file_put_contents("../data/api/iptv_channels_ger.json", json_encode($data));
             
             exit();
         } catch (\Throwable $th) {
