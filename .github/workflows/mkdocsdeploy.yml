@@ -45,7 +45,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Setup Python 3.x
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python_version: '3.x' # Uses latest 3.x version.
       - name: Install dependencies
