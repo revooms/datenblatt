@@ -1,17 +1,13 @@
 name: Laravel Zero
 on:
   push:
-    paths-ignore:
-      - 'data/**'
-    branches:
-      - main
+    paths-ignore: ['data/**']
+    branches: [main]
 permissions:
   contents: write
 jobs:
   laravel-zero-tests:
     runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}    
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
