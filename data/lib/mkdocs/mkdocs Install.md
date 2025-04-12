@@ -19,3 +19,6 @@ Eine ausführbare Datei "`bin/datenblatt`" wurde mit Laravel Zero entwickelt, um
 
 ### Build
 Zum "Builden" wird `mkdocs build` verwendet.
+
+### Weitere Links
+- Gutes HowTo für mkdocs/Material GitHub-Actions: https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions-material-for-mkdocs
