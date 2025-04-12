@@ -1,5 +1,4 @@
-Eine "MMORPG"-Website mit Laravel/Websockets basteln.
-
+# Eine "MMORPG"-Website mit Laravel/Websockets basteln.
 - Spieler können (vorerst nur) herumlaufen
 	- Wird via Websocket-Server an andere Spieler in der Gegend als Event weitergegeben, so dass die UI reagieren kann
 - "Cyberpunk"-Weltraum-Setting
@@ -7,6 +6,5 @@ Eine "MMORPG"-Website mit Laravel/Websockets basteln.
 	- Spieler bewegt sich in Kästchen, N, E, S, W
 
 ## Geplante Features:  
-
 - Chat mit anderen Spielern in der Umgebung
 - NPCs, z.B. Händler
