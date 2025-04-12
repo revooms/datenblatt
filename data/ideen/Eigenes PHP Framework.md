@@ -4,6 +4,8 @@ tags:
 - php
 ---
 
+2025-04-12: Könnte sich mit https://fatfreeframework.com erledigt haben
+
 # Eigenes PHP Framework
 - Framework mit Modulen
 	- Autoloader
