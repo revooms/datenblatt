@@ -2,3 +2,37 @@
 
 Workflow in Github einrichten:
 https://github.com/mkdocs/mkdocs/discussions/3432
+
+---
+
+Via https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions-material-for-mkdocs
+```
+name: "Deploy mkdocs to github pages"
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email datenblatt+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache 
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force
+```
