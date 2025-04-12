@@ -1,8 +1,7 @@
 name: "Deploy mkdocs to github pages"
 on:
   push:
-    paths:
-      - 'data/**'
+    paths: ['data/**', 'data/api/**']
     branches:
       - main
 permissions:
@@ -19,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - run: echo "cache_id=$(date --utc '+%Y%m%d%H')" >> $GITHUB_ENV 
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
