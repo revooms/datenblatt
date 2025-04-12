@@ -1,6 +1,8 @@
 name: Laravel Zero
 on:
   push:
+    paths-ignore:
+      - 'data/**'
     branches:
       - main
 permissions:
