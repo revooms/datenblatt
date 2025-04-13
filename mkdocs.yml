@@ -19,10 +19,10 @@ plugins:
       # archive_toc: true
   - search
   # - social
-  - tags:
-      tags_file: tags.md 
+  - tags
 markdown_extensions:
   - attr_list
+  - pymdownx.magiclink  
 extra:
   consent:
     title: Cookie consent
