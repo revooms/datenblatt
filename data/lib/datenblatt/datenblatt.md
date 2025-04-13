@@ -1,8 +1,14 @@
+---
+tags:
+- datenblatt
+---
+
 Ein datenblatt über datenblatt - in datenblatt
 
 *`mindblown_inception.gif`*
 
 Was geplant ist/noch gemacht werden muss:
+
 - Automatisierte Vertaggung von Artikeln in Ordnern
 	- Artikel werden entsprechend dem Ordnernamen getaggt
 	- Wenn mich nicht alles täuscht wird in `mkdocs` hierfür eine `.meta.yml` in den Ordner gelegt
