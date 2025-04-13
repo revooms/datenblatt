@@ -84,9 +84,9 @@ class FetchIPTVtoJsonCommand extends Command
 
             $data = [
                 'title' => "IPTV Streams DE",
+                'created_at' => date('Y-m-d H:i:s'),
                 'author' => 'https://github.com/revooms',
                 'description' => "Eine Liste von IPTV-Sendern, extrahiert und konvertiert nach JSON von {$url}",
-                'created_at' => date('Y-m-d H:i:s'),
                 'original_playlist_url' => $url,
                 'channels' => $items,
             ];
