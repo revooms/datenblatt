@@ -1,5 +1,5 @@
 site_name: datenblatt
-site_url: http://localhost:8000
+repo_url: https://github.com/revooms/datenblatt
 docs_dir: data
 theme:
   name: material
@@ -9,10 +9,35 @@ theme:
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     # - navigation.sections
     # - navigation.expand
     - navigation.top
+  palette:
+    
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference    
+
 plugins:
   - blog:
       post_readtime: true
