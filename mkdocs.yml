@@ -4,12 +4,12 @@ docs_dir: data
 theme:
   name: material
   features:
-    # - navigation.indexes
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
-    - navigation.tabs
-    - navigation.tabs.sticky
+    # - navigation.tabs
+    # - navigation.tabs.sticky
     # - navigation.sections
     # - navigation.expand
     - navigation.top
@@ -44,6 +44,7 @@ plugins:
       # archive_toc: true
   - search
   # - social
+  - meta
   - tags
 markdown_extensions:
   - attr_list
