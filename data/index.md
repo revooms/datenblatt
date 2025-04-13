@@ -8,5 +8,3 @@ Die Idee: "_Daten mit Hilfe von [Obsidian](https://obsidian.md/) verwalten und v
 Eine Liste der verwendeten Tags auf dieser Site:
 
 <!-- material/tags -->
-
-
