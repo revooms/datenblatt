@@ -1,6 +1,8 @@
 # Godot Engine
+
 ## General
-https://docs.godotengine.org/en/stable/getting_started/step_by_step/your_first_game.html
+
+- https://docs.godotengine.org/en/stable/getting_started/step_by_step/your_first_game.html
 - https://www.gdquest.com/tutorial/godot/2d/local-multiplayer-input/
 - https://andymaloney.com/2021/02/code/vertical-scrolling-parallax-backgrounds-in-godot/
 - https://kidscancode.org/godot_recipes/2d/2d_shooting/
@@ -12,18 +14,23 @@ https://docs.godotengine.org/en/stable/getting_started/step_by_step/your_first_g
 - [https://github.com/godotengine/awesome-godot#awesome-godot-](https://github.com/godotengine/awesome-godot#awesome-godot-)
 
 ## JSON
+
 - https://docs.godotengine.org/en/stable/classes/class_json.html
 - https://godotengine.org/qa/8291/how-to-parse-a-json-file-i-wrote-myself
 
 ## Tutorials/Snippets:
+
 - [Godot 101](https://kidscancode.org/godot_recipes/g101/)
 
 ## Art/Assets/Sprites:
+
 - https://elthen.itch.io/
 - https://github.com/GDQuest/krita-tileset-templates
 
 ## Tools:
+
 - https://azagaya.itch.io/laigter
 
 ## Code:
+
 - [[Connect Signal]]
