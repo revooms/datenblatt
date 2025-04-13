@@ -5,6 +5,8 @@
 
 Die Idee: "_Daten mit Hilfe von [Obsidian](https://obsidian.md/) verwalten und via [MkDocs](https://www.mkdocs.org/) als durchsuchbare statische Website ausgeben_"
 
+
+## Tags
 Eine Liste der verwendeten Tags auf dieser Site:
 
 <!-- material/tags -->
