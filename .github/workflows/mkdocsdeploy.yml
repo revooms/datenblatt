@@ -2,8 +2,12 @@ name: "Deploy mkdocs to github pages"
 on:
   push:
     paths: ['mkdocs.yml', 'data/**', 'data/api/**']
-    branches:
-      - main
+    branches: ['main']
+  workflow_dispatch:
+    inputs:
+      temp:
+        description: 'Temporär'
+        required: false
 permissions:
   contents: write
 jobs:
