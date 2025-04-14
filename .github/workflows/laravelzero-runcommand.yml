@@ -2,9 +2,14 @@ name: Laravel Zero
 on:
   schedule:
     - cron: "25 */2 * * *"
-  push:
-    paths-ignore: ['data/**']
-    branches: [main]
+  #push:
+  #  paths-ignore: ['data/**']
+  #  branches: [main]
+  workflow_dispatch:
+    inputs:
+      temp:
+        description: 'Temporär'
+        required: false
 permissions:
   contents: write
 jobs:
