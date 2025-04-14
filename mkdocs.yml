@@ -49,7 +49,7 @@ plugins:
 markdown_extensions:
   - attr_list
   - pymdownx.magiclink
-  - del_ins  
+  - pymdownx.tilde
 extra:
   consent:
     title: Cookie consent
