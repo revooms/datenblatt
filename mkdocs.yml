@@ -48,7 +48,8 @@ plugins:
   - tags
 markdown_extensions:
   - attr_list
-  - pymdownx.magiclink  
+  - pymdownx.magiclink
+  - del_ins  
 extra:
   consent:
     title: Cookie consent
