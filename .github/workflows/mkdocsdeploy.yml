@@ -1,7 +1,7 @@
 name: "Deploy mkdocs to github pages"
 on:
   push:
-    paths: ['data/**', 'data/api/**']
+    paths: ['mkdocs.yml', 'data/**', 'data/api/**']
     branches:
       - main
 permissions:
