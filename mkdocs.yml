@@ -1,4 +1,5 @@
 site_name: datenblatt
+site_url: https://revooms.github.io/datenblatt
 repo_url: https://github.com/revooms/datenblatt
 docs_dir: data
 theme:
