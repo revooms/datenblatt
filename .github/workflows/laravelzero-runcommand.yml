@@ -1,7 +1,7 @@
 name: Laravel Zero
 on:
   schedule:
-    - cron: "25 */2 * * *"
+    - cron: "25 */6 * * *"
   #push:
   #  paths-ignore: ['data/**']
   #  branches: [main]
